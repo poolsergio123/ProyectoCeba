@@ -1,0 +1,14 @@
+h1{
+    color: red;
+}
+
+@keyframes mover{
+    0%{
+        transform: translate(100%);
+    }
+}
+
+
+h2{
+    color: blue;
+}

@@ -14,8 +14,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./js/script.js">
+    <script>
+        // Obtener el año actual
+        var fechaActual = new Date();
+        var annoActual = fechaActual.getFullYear();
+
+        // Mostrar el año actual en el elemento con id="annoActual"
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("annoActual").innerHTML = annoActual;
+        });
+    </script>
 </head>
 <body>
+    <style>
+        
+    </style>
 
     <!-------------------------------------------------- CABECERA -------------------------------------------------->
     <header>
@@ -147,6 +160,7 @@
 
         <!--======================================== ACERCA DE NOSOTROS==========================================-->
         <section id="about" class="about mt-5">
+            <a href="https://wa.me/999999999" class="material-icons floating-btn"><i class="fa-brands fa-whatsapp"></i></a>
             <div class="container-fluid">
                 <h2 class="h1-responsive font-weight-bold text-center my-2">Acerca De Nosotros</h2>
                 <p class="text-center w-responsive mx-auto mb-1">En el Aula Online conservamos lo mejor de la Educacion tradicional y aprovechamos de todas las ventajas de estudiar online: tecnología, flexibilidad, accesibilidad.</p>
@@ -334,35 +348,20 @@
         <section>
             <div class="container mb-5">
                 <section class="mb-4">
-                    <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
+                    <h2 class="h1-responsive font-weight-bold text-center my-4">Matricula <span id="annoActual"></span></h2>
                     <p class="text-center w-responsive mx-auto mb-5">Ingresa los datos tanto del apoderado como del alumno, para poder 
                         ponernos en contacto.
                     </p>
                     <div class="row">
-                        <div class="col-md-6 mb-md-0 mb-5">
-
-                            <div class="form-register">
-                                <h4>Datos de los Apoderados</h4>
-                                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-                                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-                                <input class="controls" type="password" name="correo" id="correo" placeholder="Nombre del Alumno">
-                                <input class="controls" type="password" name="correo" id="correo" placeholder="Apellidos del Alumno">
-                                <input class="controls" type="password" name="correo" id="correo" placeholder="Grado">
-                                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                                <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-                                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-                                <input class="botons" type="submit" value="Enviar">
-                            </div>
-
-
-                            
-                        </div>
-                        <div class="col-md-6 text-center">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d904726.6131739549!2d85.24565535!3d27.65273865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1654970604602!5m2!1sen!2snp"
-                                width="600" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                        <div class="col" style="text-align: center;height: 200px; ">
+                            <style>
+                                .aqui:hover{
+                                    background-color: #aa0202 !important; /* Change background color when hovered */
+                                    color: rgb(255, 255, 255) !important;               /* Change text color when hovered */
+                                    /* border: 1px solid #ccc !important; */
+                                }
+                            </style>
+                            <a href="https://forms.gle/L7rRrBW5oNp7pDFS8" style="text-decoration: none; "><button class="btn aqui btn-danger" style="width: 50%; height: 50%; border: 10% !important; color: aliceblue; font-size: 35px; background-color: #ff0000; " >Matriculate Ya!</button></a>
                         </div>
                     </div>
                 </section>
@@ -447,6 +446,8 @@
 document.getElementById('prev').onclick = function(){
     let lists = document.querySelectorAll('.item');
     document.getElementById('slide').prepend(lists[lists.length-1])
+        
+    
 }
         </script>
 

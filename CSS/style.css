@@ -1,3 +1,25 @@
+
+.floating-btn{
+  width: 80px;height: 80px;
+  background: #59ce72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: aliceblue;
+  font-size: 40px;
+  box-shadow: 2px 2px 5px rgba(red, green, blue, 25);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: background 0.25s;
+}
+.floating-btn:active{
+  background: #007d63;
+}
+
+
 :root{
   --principal: rgba(1,1,1,1);
 }
